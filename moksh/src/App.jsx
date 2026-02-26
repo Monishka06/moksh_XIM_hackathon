@@ -1,35 +1,38 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { Routes, Route } from "react-router-dom";
+import Home from "./home";
+import Policy from "./policy";
+import Register from "./Register";
+import Registertitles from "./RegisterdTitle";
+import Connect from "./connect";
+import Cancelled from "./cancelledTitles";
+import Defunct from "./DefunctTitles";
+import AboutOverview from "./WhatWeAre";
+import VisionMission from "./WhatWeDo";
+import OurTeam from "./WhatWeWere";
+import History from "./Events";
+import ContactInfo from "./OrganizationalChart";
+import Period from "./RegistrationPeriod";
+import Regular from "./Regularity";
+import News from "./News";
 
-function App() {
-  const [count, setCount] = useState(0)
-
+export default function App() {
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/policy" element={<Policy />} />
+      <Route path="/register" element={<Register />} />
+      <Route path="/registertitles" element={<Registertitles />} />
+      <Route path="/cancelled" element={<Cancelled />} />
+      <Route path="/defunct" element={<Defunct />} />
+       <Route path="/about" element={<AboutOverview />} />
+      <Route path="/vision" element={<VisionMission />} />
+      <Route path="/team" element={<OurTeam />} />
+      <Route path="/history" element={<History />} />
+      <Route path="/contact-info" element={<ContactInfo />} />
+      <Route path="/period" element={<Period />} />
+      <Route path="/regular" element={<Regular />} />
+      <Route path="/news" element={<News />} />
+    <Route path="/connect" element={<Connect />} />
+    </Routes>
+  );
 }
-
-export default App
