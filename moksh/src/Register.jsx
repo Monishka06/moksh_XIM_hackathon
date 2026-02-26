@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { FileText, User, MapPin } from "lucide-react";
-
+import Footer from "./footer";
 export default function RegisterTitle() {
   const [formData, setFormData] = useState({
     title: "",
@@ -184,6 +184,7 @@ export default function RegisterTitle() {
 
         </form>
       </div>
+      <Footer />
     </div>
   );
 }
@@ -201,6 +202,7 @@ function Input({ label, name, value, onChange }) {
         className="form-control"
         required
       />
+      
     </div>
   );
 }

@@ -1,5 +1,5 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-
+import Footer from "./footer";
 export default function WhatWeDo() {
   return (
     <div className="min-vh-100 position-relative">
@@ -177,6 +177,7 @@ export default function WhatWeDo() {
 
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

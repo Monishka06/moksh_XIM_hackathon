@@ -1,5 +1,5 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-
+import Footer from "./footer";
 export default function OrganizationalChart() {
   return (
     <div className="bg-light min-vh-100">
@@ -127,6 +127,7 @@ export default function OrganizationalChart() {
         </div>
 
       </div>
+      <Footer />
     </div>
   );
 }

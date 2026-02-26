@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-
+import Footer from "./footer";
 export default function RegisteredTitles() {
   const [data] = useState([
     {
@@ -230,6 +230,7 @@ export default function RegisteredTitles() {
         </div>
 
       </div>
+      <Footer />
     </div>
   );
 }

@@ -1,5 +1,5 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-
+import Footer from "./footer";
 export default function Regularity() {
   return (
     <div className="min-vh-100">
@@ -121,6 +121,7 @@ export default function Regularity() {
 
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

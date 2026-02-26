@@ -1,5 +1,5 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-
+import Footer from "./footer";
 export default function Registration() {
   return (
     <div className="min-vh-100">
@@ -138,6 +138,7 @@ export default function Registration() {
 
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

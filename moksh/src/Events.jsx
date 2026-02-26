@@ -1,5 +1,5 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-
+import Footer from "./footer";
 export default function Events() {
   const events = [
     { year: "2023", name: "Vigilance Awareness Week" },
@@ -142,6 +142,7 @@ export default function Events() {
 
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

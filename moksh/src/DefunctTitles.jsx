@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Footer from "./footer";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 export default function DefunctTitles() {
@@ -262,6 +263,7 @@ export default function DefunctTitles() {
         </div>
 
       </div>
+      <Footer />
     </div>
   );
 }

@@ -1,5 +1,5 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-
+import Footer from "./footer";
 export default function WhatWeAre() {
   return (
     <div className="bg-light min-vh-100">
@@ -129,6 +129,7 @@ export default function WhatWeAre() {
 
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

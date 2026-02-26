@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-
+import Footer from "./footer";
 export default function CancelledTitles() {
   const [form, setForm] = useState({
     title: "",
@@ -238,8 +238,11 @@ export default function CancelledTitles() {
 
           </table>
         </div>
+        
 
       </div>
+      
+      <Footer />
     </div>
   );
 }

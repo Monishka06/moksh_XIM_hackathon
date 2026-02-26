@@ -1,3 +1,4 @@
+import Footer from "./footer";
 export default function Connect() {
   return (
     <div className="bg-white min-vh-100">
@@ -58,7 +59,7 @@ export default function Connect() {
         </div>
 
       </div>
-
+<Footer />
     </div>
   );
 }

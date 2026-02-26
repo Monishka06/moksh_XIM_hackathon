@@ -1,3 +1,4 @@
+import Footer from "./footer";
 export default function Policy() {
   return (
     <div style={{ fontFamily: "Segoe UI, sans-serif", backgroundColor: "#ffffff" }}>
@@ -54,7 +55,7 @@ export default function Policy() {
       }}>
         © 2026 Moksha Publications 
       </footer>
-
+      <Footer />
     </div>
   );
 }
