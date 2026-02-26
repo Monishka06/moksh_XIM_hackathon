@@ -2,7 +2,7 @@ import sqlite3
 from flask import Flask, request, jsonify
 
 app = Flask(__name__)
-DATABASE = 'model/database.db'
+DATABASE = 'model/database2.db'
 
 def get_db_connection():
     conn = sqlite3.connect(DATABASE)
@@ -12,9 +12,20 @@ def get_db_connection():
 @app.route('/init_db', methods=['GET'])
 def init_db():
     conn = get_db_connection()
+    
+    # Registered titles dataset
     conn.execute('CREATE TABLE IF NOT EXISTS prgi_registered_titles (id INTEGER PRIMARY KEY AUTOINCREMENT, Title TEXT NOT NULL, Registration_Number TEXT NOT NULL,Registration_Date TIMESTAMP DEFAULT CURRENT_TIMESTAMP, Language TEXT NOT NULL, Periodicity TEXT NOT NULL , Publisher TEXT NOT NULL, Owner TEXT NOT NULL, Publication_State TEXT NOT NULL, Publication_District TEXT NOT NULL)')
     conn.commit()
+
+    # Cancelled titles dataset
+    conn.execute('CREATE TABLE IF NOT EXISTS prgi_cancelled_titles (id INTEGER PRIMARY KEY AUTOINCREMENT, Title TEXT NOT NULL, Registration_Number TEXT NOT NULL, Language TEXT NOT NULL, Periodicity TEXT NOT NULL,State TEXT NOT NULL, District TEXT NOT NULL, Owner TEXT NOT NULL,Publisher TEXT NOT NULL)')
+    conn.commit()
+
+    # Defunt titles dataset
+    conn.execute('CREATE TABLE IF NOT EXISTS prgi_defunct_titles (id INTEGER PRIMARY KEY AUTOINCREMENT, Title TEXT NOT NULL, Registration_Number TEXT NOT NULL, Owner TEXT NOT NULL, Publisher TEXT NOT NULL, Language TEXT NOT NULL, Periodicity TEXT NOT NULL,State TEXT NOT NULL, District TEXT NOT NULL)')
+    conn.commit()
     conn.close()
+
     return jsonify({"message": "Table created successfully!"})
 
 @app.route('/add', methods=['GET', 'POST'])
